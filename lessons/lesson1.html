@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Python Lesson 1: Basics & Syntax</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../darkmode.js" defer></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <a href="../index.html">Turbo Python</a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="lessons.html" class="nav-link">Lessons</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+    </header>
+
+    <br />
+
+    <button id="theme-switch">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+      >
+        <path
+          d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"
+        ></path>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+      >
+        <path
+          d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"
+        ></path>
+      </svg>
+    </button>
+
+    <h1>🐍 Python Lesson 1: Basics & Syntax</h1>
+
+    <div class="section">
+      <h2>📘 What You’ll Learn</h2>
+      <ul>
+        <li>How to write your first Python program</li>
+        <li>What comments are</li>
+        <li>How to store values in variables</li>
+        <li>Basic data types in Python</li>
+        <li>How to convert between data types</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>✅ 1. Your First Python Program</h2>
+      <pre><code>print("Hello, world!")</code></pre>
+      <p>
+        <code>print()</code> is a function that shows messages on the screen.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>✍️ 2. Comments</h2>
+      <pre><code># This is a comment
+print("This line prints")  # This is an inline comment</code></pre>
+      <p>Comments help explain your code and are ignored by Python.</p>
+    </div>
+
+    <div class="section">
+      <h2>📦 3. Variables</h2>
+      <pre><code>name = "Alice"
+age = 15
+is_student = True</code></pre>
+      <p>You can store information in variables and use them later.</p>
+    </div>
+
+    <div class="section">
+      <h2>🧠 4. Data Types</h2>
+      <ul>
+        <li><strong>int</strong>: <code>x = 10</code></li>
+        <li><strong>float</strong>: <code>pi = 3.14</code></li>
+        <li><strong>str</strong>: <code>name = "Alex"</code></li>
+        <li><strong>bool</strong>: <code>is_cool = True</code></li>
+      </ul>
+      <p>You can check a variable’s type with <code>type()</code>:</p>
+      <pre><code>print(type(age))  # &lt;class 'int'&gt;</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>🔁 5. Type Conversion</h2>
+      <pre><code>score = "100"
+print(int(score) + 50)  # Output: 150
+
+points = 42
+print("You scored " + str(points) + " points!")</code></pre>
+      <p>
+        You can convert types using <code>int()</code>, <code>str()</code>, and
+        more.
+      </p>
+    </div>
+
+    <div class="practice-time">
+      <h2>🧪 Practice Time!</h2>
+      <p>Write a script that:</p>
+      <ol>
+        <li>Stores your name and age in variables</li>
+        <li>Prints: <em>"Hi, my name is ___ and I am ___ years old!"</em></li>
+      </ol>
+      <button class="reveal-button" onclick="toggleSolution(this)">
+        🔓 Show Solution
+      </button>
+      <div class="placeholder solution" style="display: none">
+        <pre><code>name = "Your Name"
+age = 16
+print("Hi, my name is " + name + " and I am " + str(age) + " years old!")</code></pre>
+      </div>
+    </div>
+
+    <div class="bonus-tip">
+      <h2>🎁 Bonus Tip</h2>
+      <p>You can get user input using <code>input()</code>:</p>
+      <pre><code>name = input("What is your name? ")
+print("Hello, " + name + "!")</code></pre>
+    </div>
+
+    <div class="quiz">
+      <h2>🧠 Quick Quiz</h2>
+      <ol>
+        <li>What does <code>print()</code> do?</li>
+        <li>How do you write a comment?</li>
+        <li>What are the four basic data types we covered?</li>
+        <li>How do you check the type of a variable?</li>
+        <li>What does <code>str(10)</code> return?</li>
+      </ol>
+      <button class="reveal-button" onclick="toggleSolution(this)">
+        🔓 Show Solution
+      </button>
+      <div class="placeholder solution" style="display: none">
+        📝 Example answers:<br />
+        1. It displays a message on the screen.<br />
+        2. With a <code>#</code> symbol before your comment.<br />
+        3. int, float, str, bool<br />
+        4. Use the <code>type()</code> function.<br />
+        5. The string "10"
+      </div>
+    </div>
+
+    <div class="mini-project">
+      <h2>🧩 Mini Project: Introduction Bot</h2>
+      <p>Create a program that:</p>
+      <ul>
+        <li>Asks for your name, age, and hobby</li>
+        <li>
+          Prints:
+          <em>"Hello! My name is ___. I'm ___ years old and I love ___!"</em>
+        </li>
+      </ul>
+      <button class="reveal-button" onclick="toggleSolution(this)">
+        🔓 Show Solution
+      </button>
+      <div class="placeholder solution" style="display: none">
+        <pre><code>name = input("What is your name? ")
+age = input("How old are you? ")
+hobby = input("What is your favorite hobby? ")
+
+print("Hello! My name is " + name + ". I'm " + age + " years old and I love " + hobby + "!")</code></pre>
+      </div>
+    </div>
+
+    <div class="challenge">
+      <h2>🔓 Extra Mini Challenge</h2>
+      <p>
+        Ask the user for their birth year, and calculate how old they will be in
+        5 years.
+      </p>
+      <button class="reveal-button" onclick="toggleSolution(this)">
+        🔓 Show Solution
+      </button>
+      <div class="placeholder solution" style="display: none">
+        <pre><code>birth_year = int(input("What year were you born? "))
+current_year = 2025
+age_in_5_years = (current_year - birth_year) + 5
+print("In 5 years, you will be " + str(age_in_5_years) + " years old.")</code></pre>
+      </div>
+    </div>
+
+    <script>
+      function toggleSolution(button) {
+        const solutionBox = button.nextElementSibling;
+        const isHidden = solutionBox.style.display === "none";
+        solutionBox.style.display = isHidden ? "block" : "none";
+        button.textContent = isHidden ? "🙈 Hide Solution" : "🔓 Show Solution";
+      }
+    </script>
+  </body>
+</html>

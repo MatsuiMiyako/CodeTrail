@@ -1,0 +1,401 @@
+:root {
+  --base-color: #fafafa; /* Light gray background */
+  --text-color: #2c3e50; /* Dark gray for text */
+  --header-color: #34495e; /* Slightly muted blue-gray for headers */
+  --button-bg: #ecf0f1; /* Light gray for buttons */
+  --button-text: #2c3e50; /* Dark gray for button text */
+  --highlight: #bdc3c7; /* Soft gray for subtle accents */
+  --card-bg: #ffffff; /* White for cards */
+  --blur: blur(8px);
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+  --radius: 8px;
+  --accent: #3498db; /* Bright blue for reveal button */
+}
+
+.darkmode {
+  --base-color: #1c1c1c; /* Dark gray background for dark mode */
+  --text-color: #ecf0f1; /* Light gray text for dark mode */
+  --header-color: #95a5a6; /* Lighter gray-blue for headers in dark mode */
+  --button-bg: #34495e; /* Muted blue for buttons */
+  --button-text: #ecf0f1; /* Light text for button text */
+  --highlight: #7f8c8d; /* Muted green-gray for highlights */
+  --card-bg: #2c3e50; /* Darker card background */
+  --accent: #2980b9; /* Slightly darker blue for dark mode */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background-color: var(--base-color);
+  color: var(--text-color);
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 800px;
+  transition:
+    background-color var(--transition-speed),
+    color var(--transition-speed);
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+  color: var(--header-color);
+  margin-top: 1.5rem;
+}
+
+code {
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.darkmode code {
+  background: #34495e;
+}
+
+pre {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.darkmode pre {
+  background: #2c3e50;
+}
+
+/* Sections */
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.placeholder {
+  background: #d4f1d4; /* Soft mint green for placeholder */
+  padding: 0.5rem;
+  border-left: 5px solid #50c878; /* Light green border */
+  margin-top: 0.5rem;
+}
+
+.bonus-tip {
+  background: #ffd1b3; /* Light peach for bonus tip */
+  padding: 1rem;
+  border-left: 5px solid #e74c3c; /* Vibrant red border */
+  margin-top: 1rem;
+  border-radius: var(--radius); /* Rounded corners */
+  box-shadow: var(--shadow); /* Consistent shadow for depth */
+  font-style: italic; /* Italicize the bonus tip text for emphasis */
+}
+
+.darkmode .bonus-tip {
+  background: #e74c3c; /* Dark red background for dark mode */
+  border-left-color: #c0392b; /* Deep red border in dark mode */
+}
+
+/* Practice time and quiz sections */
+.practice-time {
+  background: #e0b3e6; /* Soft lavender for practice time */
+  padding: 1rem;
+  border-left: 5px solid #9b59b6; /* Deep purple border */
+  margin-top: 1rem;
+  border-radius: var(--radius); /* Rounded corners */
+  box-shadow: var(--shadow); /* Consistent shadow for depth */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+.quiz {
+  background: #fff7d1; /* Soft buttery yellow for quiz */
+  padding: 1rem;
+  border-left: 5px solid #f39c12; /* Orange-yellow border */
+  margin-top: 1rem;
+  border-radius: var(--radius); /* Added border radius */
+  box-shadow: var(--shadow); /* Add shadow for consistency */
+}
+
+.mini-project {
+  background: #a9c8e6; /* Soft sky blue background */
+  padding: 1rem;
+  border-left: 5px solid #8e44ad; /* Blue-violet border */
+  margin-top: 1rem;
+  border-radius: var(--radius); /* Already rounded */
+  box-shadow: var(--shadow); /* Shadow for depth */
+}
+
+.challenge {
+  background: #b2f5e6; /* Soft teal for challenge */
+  padding: 1rem;
+  border-left: 5px solid #1abc9c; /* Minty green border */
+  margin-top: 1rem;
+  border-radius: var(--radius); /* Added border radius */
+  box-shadow: var(--shadow); /* Add shadow for consistency */
+}
+
+/* Dark Mode Adjustments */
+.darkmode .placeholder {
+  background: #34495e; /* Dark blue-gray */
+  border-left-color: #50c878; /* Light green border in dark mode */
+}
+
+.darkmode .practice-time {
+  background: #2c3e50; /* Darker teal background for practice time */
+  padding: 1rem;
+  border-left: 5px solid #8e44ad; /* Deep purple border */
+  margin-top: 1rem;
+  border-radius: var(--radius); /* Rounded corners */
+  box-shadow: var(--shadow); /* Consistent shadow for depth */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+.darkmode .bonus-tip {
+  background: #2c3e50; /* Darker background for bonus tip */
+  border-left-color: #e74c3c; /* Bright red border */
+}
+
+.darkmode .quiz {
+  background: #2c3e50; /* Darker background for quiz */
+  border-left-color: #f39c12; /* Orange-yellow border in dark mode */
+}
+
+.darkmode .mini-project {
+  background: #2c3e50; /* Darker background in dark mode */
+  border-left-color: #8e44ad; /* Blue-violet border */
+}
+
+.darkmode .challenge {
+  background: #2c3e50; /* Darker background for challenge */
+  border-left-color: #1abc9c; /* Minty green border in dark mode */
+}
+
+/* Optional: Theme toggle button (kept from your previous design) */
+
+#theme-switch {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-speed),
+    color var(--transition-speed),
+    transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  box-shadow: var(--shadow);
+}
+
+#theme-switch:hover {
+  background-color: var(--button-text);
+  color: var(--base-color);
+  transform: scale(1.05);
+}
+
+#theme-switch svg {
+  width: 1.2em;
+  height: 1.2em;
+  fill: currentColor;
+  transition: opacity var(--transition-speed);
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+  display: inline;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.nav-btn {
+  text-decoration: none;
+  background-color: #3498db; /* Blue color for buttons */
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: background-color var(--transition-speed);
+  box-shadow: var(--shadow);
+}
+
+.nav-btn:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+.nav-btn:active {
+  background-color: #1c5988; /* Darkest blue on click */
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #3498db; /* Navbar background color */
+  color: white;
+  box-shadow: var(--shadow);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.navbar .logo a {
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  transition: background-color var(--transition-speed);
+}
+
+.nav-link:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+.nav-link:active {
+  background-color: #1c5988; /* Even darker blue when clicked */
+}
+
+/* Ensure the body doesn't overlap the navbar */
+body {
+  margin-top: 4rem; /* Adjusted space to fit navbar */
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.reveal-button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+}
+
+.reveal-button:hover {
+  opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #2c3e50;
+  color: white;
+  position: relative;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* .hero-section */
+.hero-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+}
+
+.hero-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+}
+
+.hero-section .btn-primary {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero-section .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* .about-course, .estimated-time, .course-outline, .get-started */
+section {
+  padding: 40px 20px;
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+section h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+section p,
+section ul {
+  font-size: 1.1em;
+}
+
+section ul {
+  padding-left: 20px;
+}
+
+section .btn-primary {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+section .btn-primary:hover {
+  background-color: #0056b3;
+}

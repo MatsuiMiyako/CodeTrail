@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Python Lesson 2: If Statements & Logic</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../darkmode.js" defer></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <a href="../index.html">Turbo Python</a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="lessons.html" class="nav-link">Lessons</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+    </header>
+
+    <br />
+
+    <button id="theme-switch">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+      >
+        <path
+          d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+      >
+        <path
+          d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"
+        />
+      </svg>
+    </button>
+
+    <h1>🐍 Python Lesson 2: If Statements & Logic</h1>
+
+    <div class="section">
+      <h2>📘 What You’ll Learn</h2>
+      <ul>
+        <li>
+          How to use <code>if</code>, <code>elif</code>, and <code>else</code>
+        </li>
+        <li>How to compare values using conditions</li>
+        <li>
+          Logical operators: <code>and</code>, <code>or</code>, and
+          <code>not</code>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>✅ 1. Basic If Statements</h2>
+      <pre><code>age = 16
+if age >= 18:
+    print("You're an adult!")
+else:
+    print("You're a minor.")</code></pre>
+      <p>The code runs different blocks depending on the condition.</p>
+    </div>
+
+    <div class="section">
+      <h2>🔄 2. elif and else</h2>
+      <pre><code>score = 85
+
+if score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+elif score >= 70:
+    print("C")
+else:
+    print("F")</code></pre>
+      <p><code>elif</code> lets you check multiple conditions in order.</p>
+    </div>
+
+    <div class="section">
+      <h2>🧠 3. Logical Operators</h2>
+      <ul>
+        <li><code>and</code>: both must be true</li>
+        <li><code>or</code>: at least one must be true</li>
+        <li><code>not</code>: flips true/false</li>
+      </ul>
+      <pre><code>age = 16
+has_permission = True
+
+if age >= 13 and has_permission:
+    print("Access granted!")</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>🔍 4. Comparison Operators</h2>
+      <ul>
+        <li><code>==</code>: equal</li>
+        <li><code>!=</code>: not equal</li>
+        <li>
+          <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>,
+          <code>&lt;=</code>
+        </li>
+      </ul>
+      <pre><code>num = 10
+if num != 5:
+    print("Not five!")</code></pre>
+    </div>
+
+    <div class="practice-time">
+      <h2>🧪 Practice Time!</h2>
+      <p>Write a script that:</p>
+      <ol>
+        <li>Asks the user for a number</li>
+        <li>Prints whether it's positive, negative, or zero</li>
+      </ol>
+      <button class="reveal-button" onclick="toggleSolution(this)">
+        🔓 Show Solution
+      </button>
+      <div class="placeholder solution" style="display: none">
+        <pre><code>num = int(input("Enter a number: "))
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Negative")
+else:
+    print("Zero")</code></pre>
+      </div>
+    </div>
+
+    <div class="bonus-tip">
+      <h2>🎁 Bonus Tip</h2>
+      <p>You can combine logic with user input:</p>
+      <pre><code>username = input("Enter username: ")
+if username != "":
+    print("Welcome, " + username)
+else:
+    print("You didn't enter a name!")</code></pre>
+    </div>
+
+    <div class="quiz">
+      <h2>🧠 Quick Quiz</h2>
+      <ol>
+        <li>What does <code>elif</code> mean?</li>
+        <li>
+          What’s the difference between <code>and</code> and <code>or</code>?
+        </li>
+        <li>How do you check if two values are not equal?</li>
+        <li>What happens if no condition is true?</li>
+      </ol>
+      <button class="reveal-button" onclick="toggleSolution(this)">
+        🔓 Show Solution
+      </button>
+      <div class="placeholder solution" style="display: none">
+        📝 Example answers:<br />
+        1. "Else if" — a second condition to check.<br />
+        2. <code>and</code> needs both true; <code>or</code> only needs one.<br />
+        3. Use <code>!=</code><br />
+        4. The <code>else</code> block runs (if there is one).
+      </div>
+    </div>
+
+    <div class="mini-project">
+      <h2>🧩 Mini Project: Grading Bot</h2>
+      <p>Create a program that:</p>
+      <ul>
+        <li>Asks for your score out of 100</li>
+        <li>Prints a letter grade: A, B, C, or F</li>
+      </ul>
+      <button class="reveal-button" onclick="toggleSolution(this)">
+        🔓 Show Solution
+      </button>
+      <div class="placeholder solution" style="display: none">
+        <pre><code>score = int(input("Enter your score: "))
+
+if score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+elif score >= 70:
+    print("C")
+else:
+    print("F")</code></pre>
+      </div>
+    </div>
+
+    <div class="challenge">
+      <h2>🔓 Extra Mini Challenge</h2>
+      <p>
+        Ask the user for their age and whether they have permission. Print if
+        they can join the game.
+      </p>
+      <button class="reveal-button" onclick="toggleSolution(this)">
+        🔓 Show Solution
+      </button>
+      <div class="placeholder solution" style="display: none">
+        <pre><code>age = int(input("Enter your age: "))
+permission = input("Do you have permission? (yes/no): ")
+
+if age >= 13 and permission.lower() == "yes":
+    print("You can join the game!")
+else:
+    print("Sorry, you can't join.")</code></pre>
+      </div>
+    </div>
+
+    <script>
+      function toggleSolution(button) {
+        const solutionBox = button.nextElementSibling;
+        const isHidden = solutionBox.style.display === "none";
+        solutionBox.style.display = isHidden ? "block" : "none";
+        button.textContent = isHidden ? "🙈 Hide Solution" : "🔓 Show Solution";
+      }
+    </script>
+  </body>
+</html>
