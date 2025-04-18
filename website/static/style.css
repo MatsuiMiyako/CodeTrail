@@ -34,7 +34,7 @@ body {
   background-color: var(--base-color);
   color: var(--text-color);
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem; /* Adjusted padding */
   max-width: 800px;
   transition:
     background-color var(--transition-speed),
@@ -62,10 +62,10 @@ code {
 
 pre {
   background: #f0f0f0;
-  padding: 1rem;
+  padding: 1.2rem; /* Adjusted padding */
   border-radius: 6px;
   overflow-x: auto;
-  margin: 1rem 0;
+  margin: 1.5rem 0; /* Adjusted margin */
 }
 
 .darkmode pre {
@@ -75,21 +75,21 @@ pre {
 /* Sections */
 
 .section {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem; /* Adjusted spacing */
 }
 
 .placeholder {
   background: #d4f1d4; /* Soft mint green for placeholder */
-  padding: 0.5rem;
+  padding: 0.6rem; /* Adjusted padding */
   border-left: 5px solid #50c878; /* Light green border */
-  margin-top: 0.5rem;
+  margin-top: 0.6rem; /* Adjusted margin */
 }
 
 .bonus-tip {
   background: #ffd1b3; /* Light peach for bonus tip */
-  padding: 1rem;
+  padding: 1.2rem; /* Adjusted padding */
   border-left: 5px solid #e74c3c; /* Vibrant red border */
-  margin-top: 1rem;
+  margin-top: 1.2rem; /* Adjusted margin */
   border-radius: var(--radius); /* Rounded corners */
   box-shadow: var(--shadow); /* Consistent shadow for depth */
   font-style: italic; /* Italicize the bonus tip text for emphasis */
@@ -103,9 +103,9 @@ pre {
 /* Practice time and quiz sections */
 .practice-time {
   background: #e0b3e6; /* Soft lavender for practice time */
-  padding: 1rem;
+  padding: 1.2rem; /* Adjusted padding */
   border-left: 5px solid #9b59b6; /* Deep purple border */
-  margin-top: 1rem;
+  margin-top: 1.2rem; /* Adjusted margin */
   border-radius: var(--radius); /* Rounded corners */
   box-shadow: var(--shadow); /* Consistent shadow for depth */
   font-weight: bold; /* Bold text for emphasis */
@@ -113,27 +113,27 @@ pre {
 
 .quiz {
   background: #fff7d1; /* Soft buttery yellow for quiz */
-  padding: 1rem;
+  padding: 1.2rem; /* Adjusted padding */
   border-left: 5px solid #f39c12; /* Orange-yellow border */
-  margin-top: 1rem;
+  margin-top: 1.2rem; /* Adjusted margin */
   border-radius: var(--radius); /* Added border radius */
   box-shadow: var(--shadow); /* Add shadow for consistency */
 }
 
 .mini-project {
   background: #a9c8e6; /* Soft sky blue background */
-  padding: 1rem;
+  padding: 1.2rem; /* Adjusted padding */
   border-left: 5px solid #8e44ad; /* Blue-violet border */
-  margin-top: 1rem;
+  margin-top: 1.2rem; /* Adjusted margin */
   border-radius: var(--radius); /* Already rounded */
   box-shadow: var(--shadow); /* Shadow for depth */
 }
 
 .challenge {
   background: #b2f5e6; /* Soft teal for challenge */
-  padding: 1rem;
+  padding: 1.2rem; /* Adjusted padding */
   border-left: 5px solid #1abc9c; /* Minty green border */
-  margin-top: 1rem;
+  margin-top: 1.2rem; /* Adjusted margin */
   border-radius: var(--radius); /* Added border radius */
   box-shadow: var(--shadow); /* Add shadow for consistency */
 }
@@ -146,9 +146,9 @@ pre {
 
 .darkmode .practice-time {
   background: #2c3e50; /* Darker teal background for practice time */
-  padding: 1rem;
+  padding: 1.2rem; /* Adjusted padding */
   border-left: 5px solid #8e44ad; /* Deep purple border */
-  margin-top: 1rem;
+  margin-top: 1.2rem; /* Adjusted margin */
   border-radius: var(--radius); /* Rounded corners */
   box-shadow: var(--shadow); /* Consistent shadow for depth */
   font-weight: bold; /* Bold text for emphasis */
@@ -178,12 +178,12 @@ pre {
 
 #theme-switch {
   position: fixed;
-  bottom: 1em;
-  right: 1em;
+  bottom: 1.5em; /* Adjusted bottom margin */
+  right: 1.5em; /* Adjusted right margin */
   background-color: var(--button-bg);
   color: var(--button-text);
   border: none;
-  padding: 0.5em 1em;
+  padding: 0.6em 1.2em; /* Adjusted padding */
   border-radius: var(--radius);
   cursor: pointer;
   transition:
@@ -192,7 +192,7 @@ pre {
     transform 0.2s;
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.6em; /* Adjusted gap */
   box-shadow: var(--shadow);
 }
 
@@ -203,8 +203,8 @@ pre {
 }
 
 #theme-switch svg {
-  width: 1.2em;
-  height: 1.2em;
+  width: 1.4em; /* Adjusted size */
+  height: 1.4em; /* Adjusted size */
   fill: currentColor;
   transition: opacity var(--transition-speed);
 }
@@ -224,16 +224,16 @@ pre {
 .navigation {
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 2.5rem; /* Adjusted margin */
 }
 
 .nav-btn {
   text-decoration: none;
   background-color: #3498db; /* Blue color for buttons */
   color: #ffffff;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2.2rem; /* Adjusted padding */
   border-radius: var(--radius);
-  font-size: 1rem;
+  font-size: 1.1rem; /* Adjusted font size */
   transition: background-color var(--transition-speed);
   box-shadow: var(--shadow);
 }
@@ -251,7 +251,7 @@ pre {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2.4rem; /* Adjusted padding */
   background-color: #3498db; /* Navbar background color */
   color: white;
   box-shadow: var(--shadow);
@@ -264,21 +264,21 @@ pre {
 
 .navbar .logo a {
   color: white;
-  font-size: 1.8rem;
+  font-size: 1.9rem; /* Adjusted size */
   text-decoration: none;
   font-weight: bold;
 }
 
 .nav-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem; /* Adjusted gap */
 }
 
 .nav-link {
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
-  padding: 0.5rem 1rem;
+  font-size: 1.3rem; /* Adjusted size */
+  padding: 0.6rem 1.2rem; /* Adjusted padding */
   border-radius: var(--radius);
   transition: background-color var(--transition-speed);
 }
@@ -293,7 +293,7 @@ pre {
 
 /* Ensure the body doesn't overlap the navbar */
 body {
-  margin-top: 4rem; /* Adjusted space to fit navbar */
+  margin-top: 4.5rem; /* Adjusted space to fit navbar */
 }
 
 /* Responsive design for small screens */
@@ -305,13 +305,13 @@ body {
 
   .nav-links {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem; /* Adjusted gap */
   }
 }
 
 .reveal-button {
-  margin-top: 1em;
-  padding: 0.5em 1em;
+  margin-top: 1.2em; /* Adjusted margin */
+  padding: 0.6em 1.2em; /* Adjusted padding */
   background-color: var(--accent);
   color: white;
   border: none;
@@ -328,7 +328,7 @@ body {
 /* Footer */
 .footer {
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.8rem; /* Adjusted padding */
   background-color: #2c3e50;
   color: white;
   position: relative;
@@ -341,17 +341,18 @@ body {
 /* .hero-section */
 .hero-section {
   text-align: center;
-  padding: 40px 20px;
-  background-color: #f8f9fa;
+  padding: 40px 20px; /* Adjusted padding */
+  background-color: #ecf0f1;
+  box-shadow: var(--shadow);
 }
 
-.hero-section h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+.hero-section h2 {
+  font-size: 2.4rem; /* Adjusted size */
 }
 
 .hero-section p {
-  font-size: 1.2em;
+  font-size: 1.2rem; /* Adjusted size */
+  margin-top: 1.5rem;
 }
 
 .hero-section .btn-primary {
@@ -398,4 +399,9 @@ section .btn-primary {
 
 section .btn-primary:hover {
   background-color: #0056b3;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
 }
