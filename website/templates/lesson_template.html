@@ -1,0 +1,55 @@
+{% extends "base.html" %} {% block title %}Lesson 1: Hello World{% endblock %}
+{% block head %}
+<!-- Any extra head content specific to the lesson -->
+{% endblock %} {% block content %}
+<div class="lesson">
+  <h1 class="mb-4">Lesson 1: Hello World</h1>
+
+  <section class="mb-5">
+    <h3>📘 Introduction</h3>
+    <p>
+      Let's start by printing your first line of Python code:
+      <code>Hello, world!</code>
+    </p>
+  </section>
+
+  <section class="mb-5">
+    <h3>💻 Example Code</h3>
+    <pre><code class="language-python">print("Hello, world!")</code></pre>
+  </section>
+
+  <section class="mb-5">
+    <h3>📝 Try it Yourself</h3>
+    <div class="code-runner mb-3">
+      <!-- Embed your code editor / Skulpt runner here -->
+      <textarea id="code-editor" class="form-control mb-2" rows="5">
+print("Hello, world!")</textarea
+      >
+      <button class="btn btn-primary">Run Code</button>
+      <div class="output mt-3 bg-light p-3" id="output">
+        Output will appear here.
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-5">
+    <h3>🧠 Quiz</h3>
+    <p>What function do you use to display text in Python?</p>
+    <ul>
+      <li>A. `input()`</li>
+      <li><strong>B. `print()`</strong></li>
+      <li>C. `output()`</li>
+    </ul>
+  </section>
+
+  <section class="mb-5">
+    <h3>🏆 Challenge</h3>
+    <p>Change the message to print your name instead of "Hello, world!".</p>
+  </section>
+</div>
+{% endblock %} {% block scripts %}
+<!-- Optional lesson-specific scripts -->
+<script>
+  // You can add code runner logic here
+</script>
+{% endblock %}

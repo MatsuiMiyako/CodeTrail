@@ -1,0 +1,80 @@
+{% extends "base.html" %} {% block title %}Lesson 1: Printing in Python{%
+endblock %} {% block head %}
+<style>
+  .code-block {
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    padding: 1rem;
+    font-family: monospace;
+    white-space: pre-wrap;
+  }
+</style>
+{% endblock %} {% block content %}
+<div class="lesson">
+  <h1 class="mb-4">Lesson 1: Printing in Python</h1>
+
+  <section class="mb-5">
+    <h3>🧠 What You'll Learn</h3>
+    <ul>
+      <li>How to use the <code>print()</code> function</li>
+      <li>Printing strings, numbers, and combining them</li>
+    </ul>
+  </section>
+
+  <section class="mb-5">
+    <h3>📘 Explanation</h3>
+    <p>
+      The <code>print()</code> function is used to display information on the
+      screen. You can print text, numbers, or even results of math.
+    </p>
+    <div class="code-block">
+      print("Hello, world!") print(5 + 3) print("Your score is", 95)
+    </div>
+  </section>
+
+  <section class="mb-5">
+    <h3>🎯 Practice Time</h3>
+    <p>Try printing the following:</p>
+    <ul>
+      <li>Your name</li>
+      <li>Your favorite number</li>
+      <li>A combination of both</li>
+    </ul>
+    <div class="code-block">
+      # Your turn! print("My name is ____") print(42) print("My favorite number
+      is", 42)
+    </div>
+  </section>
+
+  <section class="mb-5">
+    <h3>💡 Bonus Tip</h3>
+    <p>
+      Use double quotes <code>" "</code> or single quotes <code>' '</code> to
+      define strings. They both work!
+    </p>
+  </section>
+
+  <section class="mb-5">
+    <h3>❓ Quiz</h3>
+    <p>What will this print?</p>
+    <div class="code-block">print("2 + 2 =", 2 + 2)</div>
+    <p><strong>Answer:</strong> <code>2 + 2 = 4</code></p>
+  </section>
+
+  <section class="mb-5">
+    <h3>🛠 Project</h3>
+    <p>Create a short "introduction" script that prints:</p>
+    <ul>
+      <li>Your name</li>
+      <li>Your age</li>
+      <li>What you’re learning Python for</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>🌟 Mini Challenge</h3>
+    <p>Print the following in one line:</p>
+    <code>Hello, my name is Alex and I am 15 years old.</code>
+  </section>
+</div>
+{% endblock %}

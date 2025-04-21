@@ -4,21 +4,13 @@
   <h1>Python Lessons</h1>
   <p>Choose from the lessons below to begin your Python journey:</p>
   <ul>
+    {% for lesson in lessons %}
     <li>
-      <a href="{{ url_for('static', filename='lessons/lesson1.html') }}"
-        >Lesson 1: Basics & Syntax</a
+      <a href="{{ url_for('main.lesson', lesson_name=lesson[:-5]) }}"
+        >{{ lesson[:-5] }}</a
       >
     </li>
-    <li>
-      <a href="{{ url_for('static', filename='lessons/lesson2.html') }}"
-        >Lesson 2: If Statements & Logic</a
-      >
-    </li>
-    <li>
-      <a href="{{ url_for('static', filename='lessons/lesson3.html') }}"
-        >Lesson 3: Data Structures</a
-      >
-    </li>
+    {% endfor %}
   </ul>
 </section>
 {% endblock %}
