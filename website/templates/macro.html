@@ -1,0 +1,51 @@
+{# templates/macro.html #} {% macro show_solution_block(code) %}
+<div class="solution-container">
+  <button class="reveal-button toggle-solution-btn">🔓 Show Solution</button>
+  <div class="solution-block" style="display: none">
+    <pre><code>{{ code | safe }}</code></pre>
+  </div>
+</div>
+{% endmacro %} {% macro include_solution_script() %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".toggle-solution-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const block = this.nextElementSibling;
+        const showing = block.style.display === "block";
+        block.style.display = showing ? "none" : "block";
+        this.innerText = showing ? "Show Solution" : "Hide Solution";
+      });
+    });
+  });
+</script>
+{% endmacro %} {% macro include_copy_script() %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("pre").forEach((pre) => {
+      if (pre.querySelector(".copy-btn")) return; // avoid duplicates
+
+      const button = document.createElement("button");
+      button.innerText = "📋 Copy";
+      button.className = "copy-btn";
+
+      button.addEventListener("click", () => {
+        const code = pre.querySelector("code").innerText;
+        navigator.clipboard.writeText(code).then(() => {
+          button.innerText = "✅ Copied!";
+          setTimeout(() => (button.innerText = "📋 Copy"), 2000);
+        });
+      });
+
+      pre.style.position = "relative";
+      button.style.position = "absolute";
+      button.style.top = "8px";
+      button.style.right = "8px";
+      button.style.fontSize = "0.8rem";
+      button.style.padding = "4px 8px";
+      button.style.cursor = "pointer";
+
+      pre.appendChild(button);
+    });
+  });
+</script>
+{% endmacro %}
