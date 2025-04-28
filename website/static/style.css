@@ -350,3 +350,52 @@ pre {
 .darkmode .copy-btn:hover {
   background-color: #5599dd;
 }
+
+.lessons {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.lesson-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.lesson-category {
+  background: var(--card-bg, #f0f0f0);
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.darkmode .lesson-category {
+  background: #2c2c2c;
+}
+
+.lesson-category h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.lesson-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lesson-category li {
+  margin-bottom: 10px;
+}
+
+.lesson-category a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.lesson-category a:hover {
+  text-decoration: underline;
+}
