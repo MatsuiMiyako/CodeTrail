@@ -1,78 +1,102 @@
-{% extends "base.html" %} {% block title %}Welcome to Turbo Python{% endblock %}
-{% block content %}
-<section class="hero-section section">
-  <h1>Welcome to the Python Learning Portal</h1>
+{% extends "base.html" %} {% block title %}Welcome to Spectra{% endblock %} {%
+block content %}
+<section class="hero-section section text-center">
+  <h1>Welcome to Spectra</h1>
   <p>
-    Start your Python journey with interactive lessons and hands-on coding
-    challenges!
+    Your gateway to coding, music, art, and math — learn interactively across
+    disciplines!
   </p>
-  <a href="/lessons/" class="btn-primary">Start Learning Now</a>
+  <a href="/lessons/" class="btn-primary">Start Exploring</a>
 </section>
 
 <section class="section">
-  <h2>Your Python Journey Starts Here</h2>
+  <h2>Multi-Disciplinary Learning</h2>
   <p>
-    Explore interactive lessons and master Python at your own pace. Whether
-    you're a complete beginner or have some experience, you'll find lessons that
-    suit your level.
-  </p>
-</section>
-
-<section class="section">
-  <h2>About This Course</h2>
-  <p>
-    This course is designed to help you learn Python from scratch! With
-    interactive lessons, quizzes, and projects, you'll be able to apply what you
-    learn in a practical way. By the end of the course, you'll be equipped with
-    a solid understanding of Python programming.
+    Spectra bridges STEM and the arts through hands-on, project-based learning.
+    Whether you're a programmer, artist, musician, or mathematician, you'll find
+    engaging content tailored to your passions.
   </p>
 </section>
 
 <section class="section">
-  <h2>Estimated Time to Complete</h2>
+  <h2>Our Learning Approach</h2>
   <p>
-    Each lesson is designed to be completed in approximately 30 minutes to 1
-    hour. Depending on your pace, the entire course will take around 10–12 hours
-    to complete. You can work at your own speed and revisit lessons as needed.
+    Learn by doing. Each lesson is interactive and designed to be experimented
+    with immediately — no installations or setup required.
   </p>
 </section>
 
 <section class="section">
-  <h2>Course Outline</h2>
-  <ul>
-    <li>
-      <strong>Lesson 1:</strong> Basics & Syntax – Learn Python syntax,
-      variables, and data types.
-    </li>
-    <li>
-      <strong>Lesson 2:</strong> Functions & Loops – Understand functions,
-      loops, and control flow in Python.
-    </li>
-    <li>
-      <strong>Lesson 3:</strong> Data Structures – Dive into lists,
-      dictionaries, and other Python data structures.
-    </li>
-    <li>
-      <strong>Lesson 4:</strong> Object-Oriented Programming – Learn how to use
-      classes and objects in Python.
-    </li>
-    <li>
-      <strong>Lesson 5:</strong> File Handling & Libraries – Work with files and
-      external Python libraries.
-    </li>
-  </ul>
-  <p>
-    This course is continually growing, with more lessons and topics to come!
-  </p>
+  <h2>Featured Learning Paths</h2>
+  <div class="pathways-container">
+    <div class="lesson-category">
+      <h2>Python Programming</h2>
+      <ul>
+        <li>Variables & Data Types</li>
+        <li>Functions & Loops</li>
+        <li>Data Structures</li>
+        <li>Object-Oriented Programming</li>
+      </ul>
+    </div>
+
+    <div class="lesson-category">
+      <h2>Creative Arts</h2>
+      <ul>
+        <li>Music Theory Fundamentals</li>
+        <li>Digital Pixel Art</li>
+        <li>Algorithmic Composition</li>
+        <li>Creative Coding</li>
+      </ul>
+    </div>
+
+    <div class="lesson-category">
+      <h2>Mathematics</h2>
+      <ul>
+        <li>Precalculus Concepts</li>
+        <li>Trigonometry</li>
+        <li>Linear Algebra Basics</li>
+        <li>Math for Programmers</li>
+      </ul>
+    </div>
+
+    <div class="lesson-category">
+      <h2>Coming Soon</h2>
+      <ul>
+        <li>Bash Scripting</li>
+        <li>Computer Networking</li>
+        <li>Generative Art</li>
+        <li>Audio Programming</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <section class="section">
-  <h2>Get Started</h2>
-  <p>
-    Ready to dive in? Head over to the lessons section and start your journey
-    today. Every lesson builds on the previous, so it's important to take your
-    time and truly understand the material.
-  </p>
-  <a href="/lessons/" class="btn-primary">Go to Lessons</a>
+  <h2>Why Learn With Spectra?</h2>
+  <div class="project-features">
+    <div class="project-feature">
+      <div class="project-badge">1</div>
+      <strong>Project-Based</strong>
+      <p>Build real-world projects, not just theoretical exercises.</p>
+    </div>
+    <div class="project-feature">
+      <div class="project-badge">2</div>
+      <strong>Creative Freedom</strong>
+      <p>Mix logic and imagination in ways that inspire you.</p>
+    </div>
+    <div class="project-feature">
+      <div class="project-badge">3</div>
+      <strong>Self-Paced</strong>
+      <p>Learn anytime, at your own speed — no pressure.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section text-center">
+  <div class="cta-text">
+    <h2>Ready to Begin?</h2>
+    <p>Join our growing community of interdisciplinary learners today.</p>
+    <a href="/lessons/" class="btn btn-primary btn-lg">Browse All Lessons</a>
+  </div>
 </section>
 {% endblock %}

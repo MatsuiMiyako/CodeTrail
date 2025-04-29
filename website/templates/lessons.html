@@ -1,24 +1,37 @@
-{% extends "base.html" %} {% block title %}Lessons - CodeTrail{% endblock %} {%
+{% extends "base.html" %} {% block title %}Spectra Lessons{% endblock %} {%
 block content %}
 <section class="lessons">
-  <h1 class="text-center">Explore Lessons</h1>
-  <p class="text-center muted">
-    Choose a category to start your journey through CodeTrail.
+  <h1 class="text-center">Explore Spectra</h1>
+  <p class="text-center text-muted mb-4">
+    Choose your learning path across disciplines
   </p>
 
-  <div class="lesson-grid">
+  <div class="row">
     {% for category, lessons in lesson_data.items() %}
-    <div class="lesson-category">
-      <h2>{{ category }}</h2>
-      <ul>
-        {% for lesson in lessons %}
-        <li>
-          <a href="{{ url_for('main.lesson', lesson_name=lesson.slug) }}">
-            {{ lesson.title }}
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
+    <div class="col-md-4 mb-4">
+      <div class="card lesson-category h-100">
+        <div class="card-body">
+          <h2 class="card-title">
+            <i
+              class="fas {% if category == 'Python' %}fa-code {% elif category == 'Music Theory' %}fa-music {% elif category == 'Pixel Art' %}fa-palette {% elif category == 'Precalculus' %}fa-square-root-alt {% else %}fa-book{% endif %} mr-2"
+            ></i>
+            {{ category }}
+          </h2>
+          <ul class="list-unstyled">
+            {% for lesson in lessons %}
+            <li class="mb-2">
+              <a
+                href="{{ url_for('main.lesson', category=category.lower().replace(' ', '-'), lesson_name=lesson.slug) }}"
+                class="text-decoration-none"
+              >
+                <i class="far fa-circle mr-2"></i>
+                {{ lesson.title }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
     {% endfor %}
   </div>

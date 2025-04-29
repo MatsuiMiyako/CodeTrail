@@ -8,31 +8,33 @@ def title_from_slug(slug):
     return slug.replace("_", " ").title()
 
 def categorize_lessons(app):
-    folder = os.path.join(app.root_path, "templates", "lessons")
-    files = [f for f in os.listdir(folder) if f.endswith(".html")]
-
-    categories = {
-        "py": "Python",
+    lesson_dir = os.path.join(app.root_path, "templates", "lessons")
+    categories = {}
+    
+    # Map folder names to display names
+    folder_map = {
+        "python": "Python",
+        "music": "Music Theory",
+        "pixel_art": "Pixel Art",
+        "precal": "Precalculus",
         "bash": "Bash",
         "networking": "Networking"
     }
 
-    lesson_data = {}
-
-    for file in files:
-        slug = file[:-5]  # remove .html
-        prefix = slug.split("_")[0]
-
-        category = categories.get(prefix, "Other")
-        if category not in lesson_data:
-            lesson_data[category] = []
-
-        lesson_data[category].append({
-            "slug": slug,
-            "title": title_from_slug(slug)
-        })
-
-    for lessons in lesson_data.values():
-        lessons.sort(key=lambda l: int(re.search(r'\d+', l["slug"]).group()))
-
-    return lesson_data
+    for folder, display_name in folder_map.items():
+        category_path = os.path.join(lesson_dir, folder)
+        if os.path.exists(category_path):
+            lessons = []
+            for file in sorted(os.listdir(category_path)):
+                if file.endswith(".html"):
+                    slug = file[:-5]  # Remove .html
+                    title = " ".join([word.capitalize() for word in slug.split("_")])
+                    lessons.append({
+                        "slug": slug,
+                        "title": title,
+                        "path": f"lessons/{folder}/{file}"
+                    })
+            if lessons:
+                categories[display_name] = lessons
+                
+    return categories

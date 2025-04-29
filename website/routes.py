@@ -1,6 +1,7 @@
 from flask import Flask, Blueprint, render_template, abort
+from jinja2 import TemplateNotFound  # Add this import
 import os
-from .utils import categorize_lessons  # <— this is the cleaned-up helper
+from .utils import categorize_lessons
 
 app = Flask(__name__)
 main = Blueprint('main', __name__)
@@ -17,12 +18,23 @@ def about():
 def lessons():
     return render_template("lessons.html", lesson_data=categorize_lessons(app))
 
-@main.route("/lessons/<lesson_name>")
-def lesson(lesson_name):
-    path = os.path.join(app.root_path, "templates", "lessons", f"{lesson_name}.html")
-    if os.path.exists(path):
-        return render_template(f"lessons/{lesson_name}.html")
-    else:
+@main.route("/lessons/<category>/<lesson_name>")
+def lesson(category, lesson_name):
+    folder_map = {
+        "python": "python",
+        "music-theory": "music",
+        "pixel-art": "pixel_art",
+        "precalculus": "precal",
+        "bash": "bash",
+        "networking": "networking"
+    }
+    
+    if category not in folder_map:
+        abort(404)
+        
+    try:
+        return render_template(f"lessons/{folder_map[category]}/{lesson_name}.html")
+    except TemplateNotFound:
         abort(404)
 
 app.register_blueprint(main)

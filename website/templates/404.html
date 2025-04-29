@@ -1,7 +1,6 @@
 {% extends 'base.html' %} {% block title %}404 - Page Not Found{% endblock %} {%
 block content %}
-<br />
-<div class="text-center">
+<div class="text-center error-container">
   <h1 class="display-4 text-danger">Oops! 404 Error!</h1>
   <p class="lead text-muted">
     Looks like you've stumbled into the void. This page doesn't exist (yet?)!
@@ -11,7 +10,7 @@ block content %}
     <img
       src="https://media.giphy.com/media/3o6nV5u6uy27lTS3i8/giphy.gif"
       alt="Lost in space"
-      class="img-fluid rounded shadow"
+      class="img-fluid rounded shadow error-gif"
     />
   </div>
 
@@ -25,20 +24,37 @@ block content %}
         <a href="/" class="btn btn-outline-primary mt-2">Go to Home Page</a>
       </li>
       <li class="mb-2">
-        <i class="fas fa-book"></i>
+        <i class="fas fa-book-open"></i>
         <a href="/lessons/" class="btn btn-outline-info mt-2"
-          >Start Learning Python</a
+          >Explore Learning Paths</a
+        >
+      </li>
+      <li class="mb-2">
+        <i class="fas fa-compass"></i>
+        <a href="/lessons/" class="btn btn-outline-success mt-2"
+          >Browse All Subjects</a
         >
       </li>
       <li class="mb-2">
         <i class="fas fa-info-circle"></i>
         <a href="/about/" class="btn btn-outline-secondary mt-2"
-          >Learn More About Us</a
+          >About Spectra</a
         >
       </li>
     </ul>
   </div>
 
-  <p class="mt-4 text-muted">Happy Coding, and don't get lost again!</p>
+  <p class="mt-4 text-muted">Keep exploring with Spectra!</p>
 </div>
+
+<style>
+  .error-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .error-gif {
+    max-height: 300px;
+  }
+</style>
 {% endblock %}

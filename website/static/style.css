@@ -227,7 +227,6 @@ pre {
 .darkmode #theme-switch svg:last-child {
   display: inline;
 }
-
 /* Light mode solution block */
 .solution-block {
   background-color: #f4f4f4;
@@ -398,4 +397,90 @@ pre {
 
 .lesson-category a:hover {
   text-decoration: underline;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+}
+
+.lesson-category {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.lesson-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.card-title i {
+  color: var(--accent);
+}
+
+.feature-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+.feature-icon {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+.pathways-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.pathway {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+}
+.pathway-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.pathway-header i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: var(--accent);
+}
+.project-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.project-feature {
+  padding: 20px;
+  border-left: 4px solid var(--accent);
+}
+.project-badge {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.cta-section {
+  background: var(--highlight);
+  border-radius: 10px;
+  padding: 40px;
+}
+.cta-text {
+  max-width: 600px;
+  margin: 0 auto 30px;
 }
